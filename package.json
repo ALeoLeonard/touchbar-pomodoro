@@ -1,0 +1,30 @@
+{
+  "name": "touchbar-pomodoro",
+  "version": "1.0.0",
+  "description": "mac touchbar pomodoro app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALeoLeonard/touchbar-pomodoro.git"
+  },
+  "keywords": [
+    "mac",
+    "touchbar",
+    "pomodoro",
+    "electron"
+  ],
+  "author": "Andy Leonard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ALeoLeonard/touchbar-pomodoro/issues"
+  },
+  "homepage": "https://github.com/ALeoLeonard/touchbar-pomodoro#readme",
+  "devDependencies": {
+    "electron": "^1.7.5",
+    "standard": "^10.0.3"
+  }
+}
