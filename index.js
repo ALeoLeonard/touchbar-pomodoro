@@ -6,8 +6,8 @@ const Hrt = require('human-readable-time')
 let player = require('play-sound')(opts = {})
 
 let timeFormat = new Hrt('%mm%:%ss%')
-let onTime = 1500000
-let offTime = 300000
+let onTime = 5000
+let offTime = 100000
 let pomodoroDuration = onTime + offTime
 let isOffTime = false
 let pomodoroCount = 0
@@ -51,6 +51,9 @@ global.offTimer.onDone(function () {
   // pomodoroCount++
   // pomodoroCounter.label = pomodoroCount
   global.offTimer.reset(offTime)
+  player.play('bell.wav', function (err) {
+    if (err) throw err
+  })
   return timer.label
 })
 
