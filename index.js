@@ -6,8 +6,8 @@ const Hrt = require('human-readable-time')
 let player = require('play-sound')(opts = {})
 
 let timeFormat = new Hrt('%mm%:%ss%')
-let onTime = 3000
-let offTime = 3000
+let onTime = 1500000
+let offTime = 300000
 let pomodoroDuration = onTime + offTime
 let isOffTime = false
 let pomodoroCount = 0
