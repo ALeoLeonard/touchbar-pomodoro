@@ -25,6 +25,8 @@
   "homepage": "https://github.com/ALeoLeonard/touchbar-pomodoro#readme",
   "devDependencies": {
     "electron": "^1.7.5",
-    "standard": "^10.0.3"
+    "human-readable-time": "^0.2.4",
+    "standard": "^10.0.3",
+    "timer-stopwatch": "^0.2.0"
   }
 }
