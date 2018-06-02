@@ -1,5 +1,5 @@
 'user strict'
-const {app, BrowserWindow, TouchBar} = require('electron')
+const {app, BrowserWindow, TouchBar, Tray, Menu} = require('electron')
 const {TouchBarButton, TouchBarLabel, TouchBarSpacer} = TouchBar
 const Stopwatch = require('timer-stopwatch')
 const Hrt = require('human-readable-time')
@@ -79,9 +79,16 @@ const touchBar = new TouchBar([
   pomodoroCounter
 ])
 
+// Menu
+const contextMenu = Menu.buildFromTemplate([
+    {label: 'Quit'},
+    {role: 'quit'}
+])
+let tray = null
 let window
 
 app.once('ready', () => {
+  tray = new Tray('icon.png')
   window = new BrowserWindow({
     frame: false,
     titleBarStyle: 'hidden-inset',
@@ -91,4 +98,5 @@ app.once('ready', () => {
   })
   window.loadURL('about:blank')
   window.setTouchBar(touchBar)
+  tray.setContextMenu(contextMenu)
 })
