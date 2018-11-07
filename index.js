@@ -46,7 +46,7 @@ global.offTimer.onTime(function (time) {
 
 global.offTimer.onDone(function () {
   global.isOffTime = false
-  timer.label = 'Start Pomodoro! 💡'
+  timer.label = 'Start Pomodoro! 🍅'
   // counter increments by 2 :/
   // pomodoroCount++
   // pomodoroCounter.label = pomodoroCount
@@ -58,7 +58,7 @@ global.offTimer.onDone(function () {
 })
 
 const timer = new TouchBarButton({
-  label: 'Start Pomodoro! 💡',
+  label: 'Start Pomodoro! 🍅',
   backgroundColor: '#7851A9',
   click: () => {
     if (global.isOffTime) {
